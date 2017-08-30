@@ -1,0 +1,41 @@
+doctype html
+html(xmlns:ng="http://angularjs.org/" ng-app='digitalRecovery')
+	head
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width, initial-scale=1.0")
+		//, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+		meta(http-equiv="x-ua-compatible",content="IE=edge")
+		meta(name="apple-mobile-web-app-capable",content="yes")
+		meta(name="apple-touch-fullscreen",content="yes")
+
+		// bootstrap
+		link(rel="stylesheet",href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+		// snapJS
+		link(rel='stylesheet', href='stylesheets/snap.css')
+		link(rel='stylesheet', href='stylesheets/angular-snap.css')
+		// noUIslider
+		link(rel='stylesheet', href='stylesheets/nouislider.min.css')
+		// all custom styles
+		link(rel='stylesheet', href='stylesheets/style.css')
+
+	body(ng-controller="navController")
+		block content
+
+		// angularJS
+		script(type='text/javascript',src='javascripts/angular.min.js')
+		script(type='text/javascript',src='javascripts/angular-google-maps.js')
+		script(type='text/javascript',src='javascripts/angular-ui-router.min.js')
+		script(type='text/javascript',src='javascripts/angular-animate.min.js')
+		// momentJS
+		script(type='text/javascript',src='javascripts/moment.js')
+		script(type='text/javascript',src='javascripts/angular-moment.js')
+		script(type='text/javascript',src='javascripts/lodash.js')
+		script(type='text/javascript',src='javascripts/digitalRecovery.js')
+		script(type='text/javascript',src='javascripts/digitalRecovery-navController.js')
+		script(type='text/javascript',src='javascripts/digitalRecovery-mapController.js')
+		// Snap
+		script(type='text/javascript',src='javascripts/snap.js')
+		script(type='text/javascript',src='javascripts/angular-snap.js')
+		// NoUIslider
+		script(type='text/javascript',src='javascripts/nouislider.js')
+		script(type='text/javascript',src='javascripts/angular-nouislider.min.js')

@@ -1,0 +1,5 @@
+div#map_canvas(data-snap-ignore="true",ng-controller="mapController")
+	ui-gmap-google-map(center='map.center',zoom='map.zoom',options='map.options',events='map.events',data-tap-disabled=true)
+		ui-gmap-markers(models="meetings", title="'title'", day_of_week="'day_of_week'",time="'time'", address="'address'",
+		idKey="'_id'",coords="'location'",click="onMarkerClick",icon="'icon'")
+

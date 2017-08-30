@@ -1,0 +1,21 @@
+mongodata:
+  image: mongo:3.0.4
+  volumes:
+   - ./data:/data
+   - ./:/usr/src
+  command: --break-mongo
+mongo:
+  image: mongo:3.0.4
+  volumes_from:
+   - mongodata
+  command: --smallfiles
+nodeapi:
+  image: raydollete/node-api
+  ports:
+   - "7777:3000"
+  links:
+   - mongo
+  volumes_from:
+   - mongodata
+  working_dir: /usr/src
+  restart: always

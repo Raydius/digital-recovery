@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+
+html, body, #map_canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-color:#323949;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#dr-content {
+    height:100%;
+}
+
+#map_canvas {
+  position: relative;
+}
+
+.angular-google-map-container {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.topnav {
+    position:fixed;
+    z-index:100;
+    display:block;
+    width:100%;
+    height:40px;
+    padding:8px;
+    background-color:#536EA7;
+    -webkit-box-shadow: 3px 2px 13px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 3px 2px 13px 5px rgba(0,0,0,0.5);
+    box-shadow: 3px 2px 13px 5px rgba(0,0,0,0.5);
+}
+
+
+
+.topnav h1 {
+    font-size:20px;
+    margin:0;
+    padding-top:3px;
+    padding-left:8px;
+    float:left;
+    color:#FFF;
+}
+
+
+#hamburger {
+    margin:5px;
+    width: 20px;
+    height: 25px;
+    position: relative;
+    float:left;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index:20;
+
+
+}
+#hamburger span {
+    display: block;
+    position: fixed;
+    height: 2px;
+    width: 100%;
+    background: #ff9;
+
+    /*border-color:#00B4D2;*/
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+#hamburger.open span {
+    background: #d3531a;
+}
+
+#hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+#hamburger span:nth-child(2) {
+    top: 6px;
+}
+
+#hamburger span:nth-child(3) {
+    top: 12px;
+}
+
+.filterbutton {
+    font-size:16px;
+    color: #FF9;
+    top:4px;
+    cursor:pointer;
+}
+
+
+/* Bigger header for mobile phones */
+@media all and (max-device-width: 640px) {
+    .angular-google-map-container {
+        top:50px;
+    }
+    .topnav {
+        height:50px;
+        padding:13px;
+    }
+}
+
+
+.mainSearch {
+    display:inline-block;
+    width:300px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.mainSearch input {
+    height:27px;
+    padding:4px 10px;
+}
+
+.drawer-menu {
+    color:#FF9;
+    padding:15px;
+}
+
+.drawer-menu .menu-btn {
+    margin-top:10px;
+}
+
+.drawer-menu .menu-btn button {
+    width:100%;
+}
+
+.horizontal-slider {
+    width: 100%;
+
+}
+
+.timeSlider {
+    margin-bottom:25px;
+}
+
+.timeSlider label {
+    margin-bottom:0;
+}
+.timeSlider .highlighted {
+    background: deepskyblue;
+    color: #fff;
+}
+
+.timeSlider .timeLabels {
+    height:25px;
+}
+
+.timeSlider .noUi-horizontal .noUi-handle {
+    width:20px;
+    left:-10px;
+}
+
+/** Detail Box **/
+
+
+.meeting-detail-box {
+    overflow:hidden;
+    max-height:0px;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    /*background-color:#536EA7;*/
+    background-color:#000;
+    opacity:0.75;
+    transition-property: max-height;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.meeting-detail-box.showMtgSummary {
+    max-height:100px;
+}
+
+.meeting-detail-content {
+    padding:20px;
+    color:#FFF;
+}
+
+.meeting-detail-content .mtg-title {
+    font-size:14px;
+    font-weight:bold;
+}
+
+.meeting-detail-content .mtg-time {
+    font-size:14px;
+}
+
+.meeting-detail-content .mtg-address {
+    font-size:10px;
+}
+
+.meeting-detail-controls {
+    color:#FF9;
+    cursor:pointer;
+}

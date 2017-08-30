@@ -1,0 +1,15 @@
+.drawer-menu
+  .form-group
+    label Day of Week
+    select.form-control(ng-model="selectedDay",ng-options="day.id as day.name for day in days",ng-change="refreshMeetings()")
+
+  .form-group.timeSlider
+    label Meeting Starting Time
+    .timeLabels
+      .pull-left(ng-bind='earliestTime')
+      .pull-right(ng-bind='latestTime')
+    .horizontal-slider(ya-no-ui-slider='timeSliderOptions',ya-no-ui-slider-events='timeSliderEventHandlers')
+
+
+  div.menu-btn
+    button.btn.btn-primary(snap-toggle="right") Apply
