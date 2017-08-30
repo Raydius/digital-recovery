@@ -39,10 +39,6 @@ The ExpressJS framework serves both the main web interface as well as the REST A
 provided for simple setup and is used in this manner in the production environment in combination with NGINX which
 provides a reverse proxy.
 
-### Contribution guidelines ###
-
-This site is shown for educational purposes and is no longer maintained or updated.
-
 ### Who do I talk to? ###
 
 Ray Dollete <ray@raytalkstech.com>
